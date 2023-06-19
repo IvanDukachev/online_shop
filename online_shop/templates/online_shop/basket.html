@@ -1,5 +1,9 @@
 {% extends 'online_shop/base.html' %}
 
 {% block content %}
-
+<ul>
+    {% for el in archive %}
+    <li>{{ el.gender }}</li>
+    {% endfor %}
+</ul>
 {% endblock %}

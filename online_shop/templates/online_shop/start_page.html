@@ -1,5 +1,14 @@
 {% extends 'online_shop/base.html' %}
 
 {% block content %}
-
+{% load static %}
+<link href="{% static 'css/start_page.css' %}" rel="stylesheet">
+<div class="main">
+    <div>
+        <a href="{% url 'basket' %}">Woman</a>
+    </div>
+    <div>
+        <a href="{% url 'personalAccount' %}">Man</a>
+    </div>
+</div>
 {% endblock %}

@@ -66,4 +66,5 @@ class Product(models.Model):
     collection = models.CharField(("collection"), max_length=20)
     
     def __str__(self):
-        return self.name
+        return self.gender
+    

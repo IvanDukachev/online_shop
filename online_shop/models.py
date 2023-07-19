@@ -60,7 +60,7 @@ class Product(models.Model):
     size = models.CharField(("size"), max_length=50)
     type = models.CharField(("type"), choices=TYPE_CHOICES, max_length=50)
     price = models.FloatField(("price"))
-    image = models.ImageField(("image"), upload_to=None, blank=True)
+    image = models.ImageField(("image"), upload_to="online_shop/static/img/", blank=True)
     description = models.CharField(("description"), max_length=300)
     composition = models.CharField(("composition"), max_length=100)
     collection = models.CharField(("collection"), max_length=20)

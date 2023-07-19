@@ -6,7 +6,8 @@ def startPage(request):
     return render(request, "online_shop/start_page.html")
 
 def basket(request):
-    return render(request, "online_shop/basket.html")
+    archive = Product.objects.all()
+    return render(request, "online_shop/basket.html", {"archive": archive})
 
 def loginUser(request):
     return render(request, "online_shop/login_user.html")
@@ -16,8 +17,3 @@ def registerUser(request):
 
 def personalAccount(request):
     return render(request, "online_shop/personal_account.html")
-
-def printData(requsest):
-    archive = Product.objects.all()
-    return render(requsest, "online_shop/basket.html", {"archive": archive})
-
